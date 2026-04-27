@@ -1,10 +1,21 @@
+# Data manipulation
 pandas==2.2.2
 numpy==1.26.4
+
+# Visualization
 matplotlib==3.8.4
 seaborn==0.13.2
-scipy==1.13.0
-streamlit==1.35.0
 plotly==5.22.0
-openpyxl==3.1.2
+
+# Statistical analysis
+scipy==1.13.0
+
+# Interactive dashboard
+streamlit==1.35.0
+
+# Notebook environment
 jupyter==1.0.0
 ipykernel==6.29.4
+
+# File format support
+openpyxl==3.1.2
