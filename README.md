@@ -1,4 +1,4 @@
-# 🌍 African Climate Trend Analysis — Week 0 Challenge
+# 🌍 African Climate Trend Analysis Week 0 Challenge
 **10 Academy KAIM9 | April 2026**
 
 EthioClimate Analytics — supporting Ethiopia's data-driven position for COP32 (Addis Ababa, 2027).
