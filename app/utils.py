@@ -45,17 +45,25 @@ def load_country(country: str):
 
 
 def load_all(countries=None):
-    if countries is None:
-        countries = COUNTRIES
+    csv_files = list(DATA_DIR.glob("*.csv"))
+
     frames = []
-    for c in countries:
-        df = load_country(c)
-        if df is not None:
-            frames.append(df)
+    for file in csv_files:
+        df = pd.read_csv(file, parse_dates=['Date'])
+
+        # Extract country name from filename
+        country_name = file.stem.replace("_clean", "").capitalize()
+        df['Country'] = country_name
+
+        df['Year'] = df['Date'].dt.year
+        df['Month'] = df['Date'].dt.month
+
+        frames.append(df)
+
     if not frames:
         return pd.DataFrame()
-    return pd.concat(frames, ignore_index=True)
 
+    return pd.concat(frames, ignore_index=True)
 
 def monthly_avg(df, variable):
     grouped = (
