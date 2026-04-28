@@ -19,3 +19,4 @@ ipykernel==6.29.4
 
 # File format support
 openpyxl==3.1.2
+pillow>=10.0.0
